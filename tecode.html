@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SASI Institute Exam Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 30px;
+    }
+    .header img {
+      width: 200px;
+      vertical-align: middle;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+    }
+    .sub-title {
+      font-weight: bold;
+      color: darkred;
+    }
+    .box {
+      border: 1px solid #ccc;
+      margin: 20px auto;
+      padding: 10px;
+      width: 80%;
+    }
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+    .search-box {
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      width: 200px;
+    }
+    input[type="submit"] {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .print-button {
+      margin-top: 10px;
+    }
+    .print-button input {
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .notice {
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    #resultImage {
+      display: none;
+      margin-top: 30px;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="sasi-logo.png" alt="SASI Logo"> <!-- Replace with actual logo if needed -->
+    <div style="display: inline-block; text-align: left; vertical-align: middle;">
+      <div><strong>SASI INSTITUTE OF TECHNOLOGY & ENGINEERING</strong></div>
+      <div>Accredited by <strong style="color:red;">NAAC</strong> with "A" Grade, Recognised by <strong>UGC</strong> under section 2(f) 12(B)</div>
+      <div>Approved by <strong style="color:blue;">AICTE</strong> - New Delhi</div>
+      <div>Permanently Affiliated to JNTUK, SBTET, Ranked as "A" Grade by Govt. of A.P.</div>
+    </div>
+    <div style="float: right; text-align: center;">
+      <div style="font-weight:bold; font-size: 20px; border: 1px solid orange; padding: 5px;">College Code<br><span style="color:red; font-size: 24px;">K6</span></div>
+    </div>
+  </div>
+
+  <div class="title">Examination Section</div>
+  <div class="sub-title">Academic Year 2023-24</div>
+
+  <div class="box">
+    <a href="#">Results for II B.Tech II Semester (SITE23/SITE20M/SITE19) Regular/Supply Examinations June, 2024</a>
+    <div class="search-box">
+      <form onsubmit="showImage(event)">
+        <label>Enter Hall Ticket Number:</label>
+        <input type="text" id="hallTicket" placeholder="hallticket no.">
+        <input type="submit" value="Search">
+      </form>
+    </div>
+    <div class="print-button">
+      <input type="button" value="Print Result" onclick="window.print()">
+    </div>
+  </div>
+
+  <div class="notice">*Last date for Revaluation: 05-08-2024</div>
+
+  <img id="resultImage" src="temp-2.jpg" alt="Result Image"> <!-- Replace with the correct file path -->
+
+  <script>
+    function showImage(event) {
+      event.preventDefault(); // Prevent form submission
+      const img = document.getElementById("resultImage");
+      img.style.display = "block"; // Show the image
+    }
+  </script>
+
+</body>
+</html>
